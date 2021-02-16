@@ -3,7 +3,8 @@ c14180115 - Ryan Ardley
 <html>
 <body>
   <br>
-  <input type="date" id="birthday">
+  <input type="date" id="birthday"><br>
+  <input type="date" id="dayday"><br>
   <input type="submit" onclick="count()"><br>
 </body>
 <p id="demo"></p>
@@ -11,7 +12,8 @@ c14180115 - Ryan Ardley
     function count() {
       var date = document.getElementById("birthday").value;
       dati = new Date(date.toString());
-      var today = new Date("2021/02/16");
+      var toda = document.getElementById("dayday").value;
+      today = new Date(toda.toString());
       if(dati.getTime() > today.getTime()){
         var diftime = dati.getTime() - today.getTime();
         var difday = diftime / (1000360024);
