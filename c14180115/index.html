@@ -1,1 +1,26 @@
 c14180115 - Ryan Ardley
+<!DOCTYPE html>
+<html>
+<body>
+  <br>
+  <input type="date" id="birthday">
+  <input type="submit" onclick="count()"><br>
+</body>
+<p id="demo"></p>
+<script type= "text/javascript">
+    function count() {
+      var date = document.getElementById("birthday").value;
+      dati = new Date(date.toString());
+      var today = new Date("2021/02/16");
+      if(dati.getTime() > today.getTime()){
+        var diftime = dati.getTime() - today.getTime();
+        var difday = diftime / (1000360024);
+      }
+      else{
+        var diftime =  today.getTime() - dati.getTime();
+        var difday = diftime / (1000360024);
+      }
+      document.getElementById("demo").innerHTML = difday + " Day";
+    }
+    </script>
+</html>
